@@ -1,58 +1,72 @@
-# 🚀 Coleção de Exercícios em C# (C-codes)
+# 🚀 C# Exercise Collection (C-codes)
 
-Este repositório contém um conjunto de aplicações de console desenvolvidas em **C# (.NET)**. Os projetos abrangem desde lógica de programação básica, validações e manipulação de listas com LINQ, até implementações manuais de estruturas de dados clássicas como Pilhas Dinâmicas.
+This repository contains a collection of console applications developed in **C# (.NET)**. The projects cover everything from basic programming logic, validations, and list manipulation with LINQ to manual implementations of classic data structures such as Dynamic Stacks.
 
-## 📁 Estrutura do Repositório
+## 📁 Repository Structure
 
-O repositório é composto pelos seguintes programas:
+The repository is composed of the following programs:
 
-* **`MediaSalarial.cs`**: Gerenciador que recebe dados de funcionários, valida limites mínimos de remuneração e calcula estatísticas sobre os salários.
-* **`PilhaObjeto.cs`**: Implementação manual de uma estrutura de dados do tipo Pilha (LIFO - *Last In, First Out*) utilizando referências a objetos.
-* **`playlistMusicas.cs`**: Painel de análise de dados (*Data Analytics*) de uma playlist musical utilizando **LINQ** e expressões Lambda.
-* **`FolhaDePagamento.cs`**: Simulador para cálculo de salário líquido com descontos dinâmicos e progressivos de INSS e IRRF.
+* **`MediaSalarial.cs`**: Manager that receives employee data, validates minimum salary limits, and calculates salary statistics.
+* **`PilhaObjeto.cs`**: Manual implementation of a Stack data structure (LIFO - *Last In, First Out*) using object references.
+* **`playlistMusicas.cs`**: Data analytics dashboard for a music playlist using **LINQ** and Lambda expressions.
+* **`FolhaDePagamento.cs`**: Payroll calculator that simulates net salary calculation with dynamic and progressive INSS and IRRF deductions.
 
 ---
 
-## 🛠️ Detalhes de Cada Projeto
+## 🛠️ Project Details
 
-### 1. Sistema de Média Salarial (`MediaSalarial.cs`)
-Solicita o nome e o salário de um conjunto de funcionários. Possui uma estrutura de validação para impedir a inserção de valores abaixo do salário mínimo estipulado (R$ 1.400,00). Ao final, o programa calcula a média do grupo e exibe quais funcionários recebem acima dela, além de destacar o maior salário cadastrado.
-* **Conceitos aplicados:** Loops (`for`, `do-while`), manipulação de arrays, tratamento de strings e validação de entrada de dados (`float.TryParse`).
+### 1. Salary Average System (`MediaSalarial.cs`)
 
-### 2. Estrutura de Dados: Pilha (`PilhaObjeto.cs`)
-Uma implementação de **Pilha (Stack)** feita de forma nativa e dinâmica, sem depender das coleções prontas do ecossistema .NET. Cada elemento funciona como um nó que armazena seu próprio valor e aponta para o próximo elemento na memória.
-* **Operações suportadas:**
-    * `Push`: Insere um novo elemento no topo da pilha.
-    * `Pop`: Remove e retorna o elemento que está no topo (com tratamento de exceção caso a pilha esteja vazia).
-    * `Consulta` (*Peek*): Visualiza o valor do topo atual sem removê-lo.
-    * `Listar`: Percorre e exibe todos os elementos empilhados em tela.
+Requests the name and salary of a group of employees. It includes a validation structure to prevent the insertion of values below the established minimum salary (R$ 1,400.00). At the end, the program calculates the group average and displays which employees earn above it, while also highlighting the highest registered salary.
+
+* **Applied concepts:** Loops (`for`, `do-while`), array manipulation, string handling, and input validation using `float.TryParse`.
+
+### 2. Data Structure: Stack (`PilhaObjeto.cs`)
+
+A native and dynamic implementation of a **Stack** data structure, without relying on built-in .NET collections. Each element works as a node that stores its own value and points to the next element in memory.
+
+* **Supported operations:**
+
+  * `Push`: Inserts a new element at the top of the stack.
+  * `Pop`: Removes and returns the element at the top, with exception handling if the stack is empty.
+  * `Peek`: Displays the current top value without removing it.
+  * `List`: Iterates through and displays all stacked elements on the screen.
 
 ### 3. Port-A-Song Data Analytics (`playlistMusicas.cs`)
-Simula um painel analítico para um catálogo de músicas. O programa carrega uma lista de objetos em memória e disponibiliza um menu interativo que utiliza o poder do **LINQ (Language Integrated Query)** para processar as informações.
-* **Funcionalidades do Menu:**
-    1. Filtrar e listar músicas por um Gênero específico.
-    2. Exibir o Top 3 de músicas mais ouvidas com base no número de reproduções.
-    3. Calcular a média de duração (em segundos) de todo o catálogo.
-    4. Verificar se um determinado artista existe na base por meio de busca parcial.
 
-### 4. Calculadora de Folha de Pagamento (`FolhaDePagamento.cs`)
-Uma ferramenta interativa que automatiza o cálculo do salário líquido de funcionários aplicando alíquotas de impostos retidos na fonte.
-* **Regras de Negócio e Validações:**
-    * Impede a inserção de salários menores ou iguais a zero.
-    * Calcula o desconto progressivo do INSS em faixas que variam de 7,5% a 14%.
-    * Aplica a retenção do IRRF (7,5%) para valores que ultrapassam o teto de R$ 1.900,00.
-    * Exibe um demonstrativo completo contendo o Salário Bruto, os descontos aplicados e o valor Líquido final.
+Simulates an analytics dashboard for a music catalog. The program loads a list of objects in memory and provides an interactive menu that uses **LINQ (Language Integrated Query)** to process the information.
+
+* **Menu features:**
+
+  1. Filter and list songs by a specific genre.
+  2. Display the Top 3 most played songs based on the number of plays.
+  3. Calculate the average duration, in seconds, of the entire catalog.
+  4. Check whether a specific artist exists in the database through partial search.
+
+### 4. Payroll Calculator (`FolhaDePagamento.cs`)
+
+An interactive tool that automates employee net salary calculation by applying withholding tax rates.
+
+* **Business rules and validations:**
+
+  * Prevents salaries less than or equal to zero from being entered.
+  * Calculates progressive INSS deductions in brackets ranging from 7.5% to 14%.
+  * Applies IRRF withholding tax of 7.5% for values above the R$ 1,900.00 threshold.
+  * Displays a complete statement containing the gross salary, applied deductions, and final net salary.
 
 ---
 
-## 💻 Como Executar os Projetos
+## 💻 How to Run the Projects
 
-### Pré-requisitos
-* Ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado em sua máquina.
-* Um editor de código (como o [Visual Studio Code](https://code.visualstudio.com/) ou o [Visual Studio](https://visualstudio.microsoft.com/)).
+### Requirements
 
-### Passo a Passo
+* [.NET SDK](https://dotnet.microsoft.com/download) installed on your machine.
+* A code editor such as [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/).
 
-1. **Clone este repositório:**
-   ```bash
-   git clone [https://github.com/luf3ds/C-codes.git](https://github.com/luf3ds/C-codes.git)
+### Step by Step
+
+1. **Clone this repository:**
+
+```bash
+git clone https://github.com/luf3ds/C-codes.git
+```
