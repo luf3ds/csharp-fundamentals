@@ -63,10 +63,22 @@ An interactive tool that automates employee net salary calculation by applying w
 * [.NET SDK](https://dotnet.microsoft.com/download) installed on your machine.
 * A code editor such as [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/).
 
+## 👨‍💻 Author
+
+**Luis Felipe Dias de Souza**
+
+Software Development student focused on Full Stack Development, databases, and software engineering. Passionate about building scalable applications and continuously improving technical skills through hands-on projects.
+
+* GitHub: https://github.com/luf3ds
+* LinkedIn: https://www.linkedin.com/in/luis-felipe-dias-s-155b84378/
+* Email: [lufeds@outlook.com](mailto:lufeds@outlook.com)
+
+
 ### Step by Step
 
 1. **Clone this repository:**
 
 ```bash
+
 git clone https://github.com/luf3ds/C-codes.git
 ```
